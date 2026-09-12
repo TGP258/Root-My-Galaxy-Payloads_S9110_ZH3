@@ -12,6 +12,11 @@ completed offline-gate status are recorded in
 The no-BTF Android 5.10 procedure and legacy `rt_mutex_waiter` layout are
 recorded separately in
 [`SM-A155N-A155NKSS6BYH1.md`](SM-A155N-A155NKSS6BYH1.md).
+The China Galaxy S23 `SM-S9110` `S9110ZCS8FZH3` port is a shortcut variant:
+it clones a hardware-proven profile from the same kernel-build family and
+replaces only the values that differ, with every replacement verified against
+the target's own image instead of being copied. It is recorded in
+[`SM-S9110-S9110ZCS8FZH3.md`](SM-S9110-S9110ZCS8FZH3.md).
 
 ## 1. Identify the exact firmware
 
