@@ -22,6 +22,11 @@ ifeq ($(TARGET),a53x-A536EXXSNGZG3)
 API := 31
 endif
 
+ifeq ($(TARGET),dm1q-S9110ZCS8FZH3)
+APP_TARGET_CFLAGS := -DSLIDE_STACK_WRITER=1
+APP_RELEASE_LINK_FLAGS := -Wl,--gc-sections -Wl,--icf=all -Wl,-z,pack-relative-relocs -s
+endif
+
 TARGET_HEADER := src/targets/$(TARGET)/target.h
 TARGET_INCLUDE := targets/$(TARGET)/target.h
 UNAME_S := $(shell uname -s)
